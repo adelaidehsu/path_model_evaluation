@@ -3,30 +3,34 @@
 ## Download TNLR model
 
 ## Set up environment
-`conda env create -f environment.yml`
-
-`conda activate downgrade`
+Follow the commands to set up a conda environment called "downgrade".
+```bash
+conda env create -f environment.yml
+conda activate downgrade
+```
 
 ## Finetune
-`cd prostate`
+```bash
+cd prostate
 
-For a single fine-tuning job:
+#For a single fine-tuning job:
+python run_ft.py -model_type {bert|tnlr|biobert|clinical_biobert|pubmed_bert} -run {0|1|2} -task {PrimaryGleason|SecondaryGleason|MarginStatusNone|SeminalVesicleNone}
 
-`python run_ft.py -model_type {bert|tnlr|biobert|clinical_biobert|pubmed_bert} -run {0|1|2} -task {PrimaryGleason|SecondaryGleason|MarginStatusNone|SeminalVesicleNone}`
-
-For running multiple fine-tuning jobs, consider using a script:
-
-`bash batch_ft.sh`
+#For running multiple fine-tuning jobs, consider using a script:
+bash batch_ft.sh
+```
 
 ## Linear Probe
-`cd prostate`
+You can freeze the first k layers in a model by specifying `-freeze_layer_count k`.
+
+Note: the feature extraction experiment in the paper requires `-freeze_layer_count 12`.
+
+```bash
+cd prostate
 
 For a single linear-probing job:
-
-`python run_linear_probe.py -model_type {bert|tnlr|biobert|clinical_biobert|pubmef_bert} -run {0|1|2} -task {PrimaryGleason|SecondaryGleason|MarginStatusNone|SeminalVesicleNone} -freeze_layer_count {1-12}`
-
-Note: the feature extraction experiment in the paper requires `-freeze_layer_count 12`
+python run_linear_probe.py -model_type {bert|tnlr|biobert|clinical_biobert|pubmef_bert} -run {0|1|2} -task {PrimaryGleason|SecondaryGleason|MarginStatusNone|SeminalVesicleNone} -freeze_layer_count {1-12}
 
 For running multiple linear-probing jobs, consider using a script:
-
-`bash batch_lp.sh`
+bash batch_lp.sh
+```
