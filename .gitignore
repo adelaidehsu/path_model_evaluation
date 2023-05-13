@@ -24,6 +24,13 @@ var/
 pip-log.txt
 pip-delete-this-directory.txt
 
+.ipynb_checkpoints
+
+.ipynb_checkpoints
+._*.py
+._*.py
+.~*.ipynb
+
 output/
 archive/
 data/
