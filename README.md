@@ -14,7 +14,7 @@ cp -r pathology_turing turing/.
 #rename `turing/pathology_turing/` as  `turing/pathology/`
 mv turing/pathology_turing turing/pathology
 ```
-(2) Download TNLR model checkpoint `tnlrv3-base.pt` following the instrutions in their source repo, and put the checkpoint in `turing/checkpoints/`
+(2) Download TNLR model checkpoint `tnlrv3-base.pt` following the instrutions in their source repo, and put the checkpoint in `turing/src/tnlr/checkpoints/`
 
 (3) Follow the commands to set up a conda environment called "downgrade".
 ```bash
