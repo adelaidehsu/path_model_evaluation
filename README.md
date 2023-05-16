@@ -1,8 +1,17 @@
 # path_model_evaluation
 
-## Download TNLR model
-
 ## Set up environment
+(1) Install TNLR repo from source
+```bash
+git clone https://github.com/ppotash/turing-academic-UCB-UCSF.git
+
+#rename it as `turing`
+mv turing-academic-UCB-UCSF turing
+
+#copy the `pathology/` into `turing/`
+cp -r 
+```
+
 Follow the commands to set up a conda environment called "downgrade".
 ```bash
 conda env create -f environment.yml
