@@ -8,11 +8,12 @@ git clone https://github.com/ppotash/turing-academic-UCB-UCSF.git
 #rename it as `turing`
 mv turing-academic-UCB-UCSF turing
 
-#copy the `pathology/` into `turing/`
-cp -r 
+#copy `pathology_turing/` into `turing/`
+cp -r pathology_turing turing/.
 ```
+(2) Download TNLR model checkpoint `tnlrv3-base.pt` following the instrutions in their source repo, and put the checkpoint in `turing/checkpoints/`
 
-Follow the commands to set up a conda environment called "downgrade".
+(3) Follow the commands to set up a conda environment called "downgrade".
 ```bash
 conda env create -f environment.yml
 conda activate downgrade
