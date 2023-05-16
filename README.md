@@ -1,9 +1,22 @@
 # path_model_evaluation
 
-## Download TNLR model
-
 ## Set up environment
-Follow the commands to set up a conda environment called "downgrade".
+(1) Install TNLR repo from source
+```bash
+git clone https://github.com/ppotash/turing-academic-UCB-UCSF.git
+
+#rename it as `turing`
+mv turing-academic-UCB-UCSF turing
+
+#copy `pathology_turing/` into `turing/`
+cp -r pathology_turing turing/.
+
+#rename `turing/pathology_turing/` as  `turing/pathology/`
+mv turing/pathology_turing turing/pathology
+```
+(2) Download TNLR model checkpoint `tnlrv3-base.pt` following the instrutions in their source repo, and put the checkpoint in `turing/src/tnlr/checkpoints/`
+
+(3) Follow the commands to set up a conda environment called "downgrade".
 ```bash
 conda env create -f environment.yml
 conda activate downgrade
