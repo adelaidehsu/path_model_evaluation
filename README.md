@@ -1,5 +1,12 @@
 # path_model_evaluation
 
+## Organization
+- `prostate`: contains code for fine-tuning and linear probing, and notebooks for corresponding performance evaluation of the two methods.
+- `pathology` and `pathology_turing`: contains code for modeling on BERT variants or TNLR.
+- `methods`: contains code for producing structured reports from free-text ones.
+- `pyfunctions`: contains code for general utilities.
+- `interpretations`: contains codes for feature extractions and notebooks for PC evaluations and feature dynamics.
+
 ## Set up environment
 (1) Install TNLR repo from source
 ```bash
