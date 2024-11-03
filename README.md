@@ -44,7 +44,7 @@ python run_linear_probe.py -model_type {bert|tnlr|biobert|clinical_biobert|pubme
 bash batch_lp.sh
 ```
 ## Citation
-If you use any of the code in your work, please cite:
+If you use any of our code in your work, please cite:
 ```bash
 @inproceedings{
 hsu2024diagnosing,
