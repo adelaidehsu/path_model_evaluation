@@ -1,4 +1,4 @@
-# path_model_evaluation
+# Diagnosing Transformers: Illuminating Feature Spaces for Clinical Decision-Making
 
 ## Organization
 - `prostate`: contains code for fine-tuning and linear probing, and notebooks for corresponding performance evaluation of the two methods.
@@ -42,4 +42,16 @@ python run_linear_probe.py -model_type {bert|tnlr|biobert|clinical_biobert|pubme
 
 #For running multiple linear-probing jobs, consider using a script:
 bash batch_lp.sh
+```
+## Citation
+If you use any of the code in your work, please cite:
+```bash
+@inproceedings{
+hsu2024diagnosing,
+title={Diagnosing Transformers: Illuminating Feature Spaces for Clinical Decision-Making},
+author={Aliyah R. Hsu and Yeshwanth Cherapanamjeri and Briton Park and Tristan Naumann and Anobel Odisho and Bin Yu},
+booktitle={The Twelfth International Conference on Learning Representations},
+year={2024},
+url={https://openreview.net/forum?id=k581sTMyPt}
+}
 ```
